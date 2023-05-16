@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.jeyzer</groupId>
+	<artifactId>jeyzer-repo</artifactId>
+	<packaging>pom</packaging>
+	<version>3.0</version>
+	<name>Jeyzer Repositories</name>
+	<url>https://jeyzer.org</url>
+    <description>The Jeyzer repositories</description>
+	
+	<properties>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.3</version>
+				<executions>
+					<execution>
+						<id>base-profiles-zip</id>
+						<configuration>
+							<finalName>jeyzer-profiles-base-${project.version}</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<descriptors>
+								<descriptor>base-profiles.xml</descriptor>
+							</descriptors>
+							<attach>false</attach>
+							<outputDirectory>${project.build.directory}/distribution</outputDirectory>
+						</configuration>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>demo-profiles-zip</id>
+						<configuration>
+							<finalName>jeyzer-profiles-demo-${project.version}</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<descriptors>
+								<descriptor>demo-profiles.xml</descriptor>
+							</descriptors>
+							<attach>false</attach>
+							<outputDirectory>${project.build.directory}/distribution</outputDirectory>
+						</configuration>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+		</pluginManagement>
+	</build>
+
+</project>

@@ -1,0 +1,8 @@
+# ignore maven build directory
+**/target/
+# ignore the Jeyzer repositories
+**/base/
+**/demo/
+# ignore generated license files
+/LICENSE.txt
+
