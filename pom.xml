@@ -5,7 +5,7 @@
 	<groupId>org.jeyzer</groupId>
 	<artifactId>jeyzer-repo</artifactId>
 	<packaging>pom</packaging>
-	<version>3.2</version>
+	<version>3.3-SNAPSHOT</version>
 	<name>Jeyzer Repositories</name>
 	<url>https://jeyzer.org</url>
     <description>The Jeyzer repositories</description>
